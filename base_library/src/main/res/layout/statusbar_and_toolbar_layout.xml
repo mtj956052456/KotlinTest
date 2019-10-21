@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_head"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/home_padding_top_and_toolbar_height"
+    android:background="@mipmap/head_bg"
+    android:paddingTop="@dimen/home_padding_top">
+
+    <include layout="@layout/toolbar_layout" />
+
+</FrameLayout>
+

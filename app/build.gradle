@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.zhenqi.kotlin"
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        // 这是为了让ARouter知道这个模块区别于其他模块 不然报错
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':base_library')//依赖公共库
+    //noinspection GradleDependency
+    kapt rootProject.ext.dependencies["butterknife-kapt"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+
+    if (!Boolean.valueOf(rootProject.ext.isModule)) {
+//        implementation project(':login_module')             //登录Module
+//        implementation project(':video_question_module')    //语音问答Module
+//        implementation project(':air_calender_module')      //空气日历Module
+//        implementation project(':realtime_dispatch_module') //实时调度Module
+//        implementation project(':video_dispatch_module')    //视频调度Module
+//        implementation project(':history_curve_module')     //历史曲线Module
+//        implementation project(':target_assessment_module') //目标考核Module
+//        implementation project(':expert_notice_module')     //专家公告Module
+//        implementation project(':scene_supervise_module')   //现场督察Module
+//        implementation project(':pollution_trends_module')  //污染形势Module
+//        implementation project(':table_module')             //表格Module
+    }
+}

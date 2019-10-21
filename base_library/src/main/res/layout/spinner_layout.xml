@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recyclerSpinner"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/column_whitecolor_style"
+    android:overScrollMode="never"
+    android:scrollbars="none" />
+
