@@ -6,7 +6,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
-
+// 注意：主App中请确保添加aspectjx
+apply plugin: 'android-aspectjx'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"

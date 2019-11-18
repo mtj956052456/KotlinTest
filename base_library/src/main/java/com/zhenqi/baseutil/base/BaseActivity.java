@@ -11,7 +11,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
-import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,8 +18,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.facade.callback.NavigationCallback;
 import com.alibaba.android.arouter.launcher.ARouter;
@@ -32,6 +32,7 @@ import com.zhenqi.baseutil.http.API;
 import com.zhenqi.baseutil.http.OkHttpCallBack;
 import com.zhenqi.baseutil.http.OkHttpManager;
 import com.zhenqi.baseutil.interf.PermissionCallBack;
+import com.zhenqi.baseutil.swipeback.app.SwipeBackActivity;
 import com.zhenqi.baseutil.util.Base64;
 import com.zhenqi.baseutil.util.Lg;
 import com.zhenqi.baseutil.util.SPUtil;
@@ -48,7 +49,7 @@ import java.util.Map;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseActivity extends AppCompatActivity implements Thread.UncaughtExceptionHandler {
+public abstract class BaseActivity extends SwipeBackActivity implements Thread.UncaughtExceptionHandler {
     private Unbinder mUnbinders; //黄油刀绑定
     protected Bundle savedInstanceState;
 

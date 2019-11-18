@@ -104,6 +104,7 @@ dependencies {
     api rootProject.ext.dependencies["album"]
     api rootProject.ext.dependencies["permission"]
     api rootProject.ext.dependencies["lottie"]
+    api rootProject.ext.dependencies["aspectjrt"]
 
     //高德地图
     api files('libs/AMap3DMap_6.9.2_AMapNavi_6.9.0_AMapSearch_6.9.2_AMapLocation_4.7.0_20190710.jar')

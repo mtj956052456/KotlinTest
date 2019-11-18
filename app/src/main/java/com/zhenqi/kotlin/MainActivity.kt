@@ -1,10 +1,10 @@
 package com.zhenqi.kotlin
 
 import android.view.View
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.fastjson.JSONArray
 import com.blankj.utilcode.util.ToastUtils
+import com.zhenqi.baseutil.base.BaseActivity
 import com.zhenqi.baseutil.http.API
 import com.zhenqi.baseutil.http.OkHttpCallBack
 import com.zhenqi.baseutil.http.OkHttpManager
@@ -20,7 +20,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
         return R.layout.activity_main
     }
 
-    override fun doSomething() {
+    override fun afterBinder() {
+        super.afterBinder()
         initView()
         initData()
     }

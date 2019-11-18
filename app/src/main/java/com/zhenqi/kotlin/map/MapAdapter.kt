@@ -5,7 +5,7 @@ import com.chad.library.adapter.base.BaseViewHolder
 import com.zhenqi.kotlin.R
 
 /**
- *  创建者: lenovo
+ *  创建者: 孟腾蛟
  *  时间: 2019/10/21
  *  描述:
  */
